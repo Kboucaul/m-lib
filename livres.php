@@ -4,26 +4,17 @@
     //1- On récupere notre classe Livre
     require_once "Livre.class.php";
     
-    //2- On crée des objets Livre
-    $livre1 = new Livre(1, "Algoritmique selon H2PROG", 300, "algo.png");
-    $livre2 = new Livre(2, "Le virus Asiatique", 187, "virus.png");
-    $livre3 = new Livre(3, "La France au 19ème", 465, "france.png");
-    $livre4 = new Livre(4, "Le JavaScript Client", 212, "js.png");
-    
-    //3- On récupere notre classe LivreMnager
+    //2- On récupere notre classe LivreMnager
     require_once "LivreManager.class.php";
 
-    //4- On crée notre objet de type LivreManager
+    //3- On crée notre objet de type LivreManager
     $livreManager = new LivreManager();
 
-    //5- On ajoute nos livres au tableau de
-    //   livres de LivreManager via la methode
-    //   ajoutLivre.
-    $livreManager->ajoutLivre($livre1);
-    $livreManager->ajoutLivre($livre2);
-    $livreManager->ajoutLivre($livre3);
-    $livreManager->ajoutLivre($livre4);
-
+    
+    /*
+    **  On ajoute nos livres
+    */
+    $livreManager->chargementlivres();
     /*
     **  Ici temporisation car l'usage de variables
     **  n'est pas pratique pour afficher "beaucoup"
