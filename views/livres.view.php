@@ -1,20 +1,5 @@
 <?php 
     $titre = "Tous nos livres";
-    
-    //1- On récupere notre classe Livre
-    require_once "Livre.class.php";
-    
-    //2- On récupere notre classe LivreMnager
-    require_once "LivreManager.class.php";
-
-    //3- On crée notre objet de type LivreManager
-    $livreManager = new LivreManager();
-
-    
-    /*
-    **  On ajoute nos livres
-    */
-    $livreManager->chargementlivres();
     /*
     **  Ici temporisation car l'usage de variables
     **  n'est pas pratique pour afficher "beaucoup"
@@ -35,15 +20,15 @@
     <!-- UN LIVRE -->
     <?php
         $i = -1;
-        while (++$i < count($livreManager->getLivres())) {?>
+        while (++$i < count($livres)) {?>
     <tr>
         <td class="align-middle">
-            <img src="<?= "public/images/" . $livreManager->getLivres()[$i]->getImage();?>" width="60px"/>
+            <img src="<?= "public/images/" . $livres[$i]->getImage();?>" width="60px"/>
         </td>
         <td class="align-middle">
-            <?= $livreManager->getLivres()[$i]->getTitle(); ?>
+            <?= $livres[$i]->getTitle(); ?>
         </td>
-        <td class="align-middle"><?= $livreManager->getLivres()[$i]->getNbPages();?></td>
+        <td class="align-middle"><?= $livres[$i]->getNbPages();?></td>
         <td class="align-middle">
             <a href="" class="btn btn-warning">Modifier</a>
         </td>
@@ -66,5 +51,5 @@
     **  $content = "<h1 class='text-center'>Mes livres</h1>";
     */
     $content = ob_get_clean();
-    require "template.php";
+    require "views/template.view.php";
 ?>

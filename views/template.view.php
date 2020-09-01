@@ -19,10 +19,10 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-				<a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="accueil">Accueil <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="livres.php">Livres <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="livres">Livres <span class="sr-only">(current)</span></a>
 			</li>
 			</ul>
 		</div>
